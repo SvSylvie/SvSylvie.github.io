@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="/SvSylvie.github.io/css/slime.css">
 		<link rel="stylesheet" href="/SvSylvie.github.io/css/index.css">
 		<link rel="stylesheet" href="/SvSylvie.github.io/css/bootstrap.min.css">
-		<title>Welcome to SvSylvie's home!</title>
+		<title>Webpack</title>
 		<style>
 			* {
 				margin: 0;
@@ -97,60 +97,27 @@
 					</g>
 					</svg>
 				</div>
-				<p class="title">Welcome to SvSylvie's home!</p>
-			</header>
-			<div class="content"><div class="sidebar">
-    <div class="side-item checked">
-        <h5>CS</h5>
-    </div>
-    <div class="side-item">
-        <h5>Amusement</h5>
-    </div>
-    <div class="side-item">
-        <h5>Thingking</h5>
-    </div>
-</div>
+				<p class="title">Engineering</p>
+            </header>
+            <ol class="breadcrumb">
+                <li><a href="/SvSylvie.github.io/">Home</a></li>
+                <li><a href="/SvSylvie.github.io/CS.html">CS</a></li>
+                
+                
+                <li class="active">Webpack</li>
+                
 
-<div class="wrapper">
-    <div class="image CS"></div>
-    <div class="image amusement"></div>
-    <div class="image thinking"></div>
-    <div class="radmenu"><a href="#" class="show" >START</a>
-</div>
-<script>
-    var sideItem = document.getElementsByClassName('side-item');
-    var image = document.getElementsByClassName('image');
-    // var radmenu = document.getElementsByClassName('radmenu')[0];
-    var show = document.getElementsByClassName('show')[0];
-    var current = 0;
-    show.href = '/SvSylvie.github.io/CS.html';
-    for(var i = 0; i < sideItem.length; i++) {
-        (function(i){
-            sideItem[i].onclick = function() {
-                current = i;
-                switch(current){
-                    case 0: show.href = '/SvSylvie.github.io/CS.html'; break;
-                    case 1: show.href = '/SvSylvie.github.io/Amusement.html'; break;
-                    case 2: show.href = '/SvSylvie.github.io/Thinking.html'; break;
-                }
-                console.log(current)
-                sideItem[i].classList.add('checked');
-                image[i].style.display = 'block';
-                for(var j = 0; j < sideItem.length; j++) {
-                    if(j != i) {
-                        sideItem[j].classList.remove('checked');
-                        image[j].style.display = 'none';
-                    }
-                }
-            }
-        })(i);
-    }
-</script>
-
-</div>
+            </ol>
+            
+			<div class="content">
+                
+                    <span class="date">29 Jul 2018</span>
+                
+                <div class="blog-article"></div>
+            </div>
 		</div>
 		<script src="/SvSylvie.github.io/js/slime.js"></script>
 		<script src="/SvSylvie.github.io/js/jqueryNew.js"></script>
-		<script src="/SvSylvie.github.io/js/bootstrap.min.js"></script>
+        <script src="/SvSylvie.github.io/js/bootstrap.min.js"></script>
 　　</body>
 </html>

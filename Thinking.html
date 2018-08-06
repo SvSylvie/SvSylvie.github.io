@@ -1,0 +1,33 @@
+---
+layout: bread
+title: Nourishment for the mind
+category: Thinking
+header: Nourishment for the mind
+---
+
+<ul>
+    <h5>读书有感</h5>
+    {% for post in site.tags.Reaction %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>摘抄</h5>
+    {% for post in site.tags.Excerpt %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+    
+    <h5>Informal Essay</h5>
+    {% for post in site.tags.IE %}
+　　<li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+　　{% endfor %}
+</ul>
+    

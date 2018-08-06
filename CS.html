@@ -1,0 +1,64 @@
+---
+layout: bread
+category: CS
+header: Computer Science and Technology
+title: Computer Science and Technology
+---
+
+<ul>
+    <h5>HTML5 & CSS3</h5>
+    {% for post in site.tags.HC %}
+    <li>
+        &emsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        &emsp;<span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>JS基础</h5>
+    {% for post in site.tags.JS %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+    
+    <h5>算法与数据结构</h5>
+    {% for post in site.tags.AD %}
+　　<li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+　　{% endfor %}
+
+    <h5>工程化</h5>
+    {% for post in site.tags.Engineering %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+    
+    <h5>框架</h5>
+    {% for post in site.tags.Frame %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>网络安全</h5>
+    {% for post in site.tags.Safe %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>性能提升</h5>
+    {% for post in site.tags.Efficiency %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+</ul>

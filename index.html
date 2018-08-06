@@ -1,18 +1,53 @@
 ---
 layout: default
-title: SvSylvie's home, welcome you guys!
+title: Welcome to SvSylvie's home!
 ---
 
-<h2>{{ page.title }}</h2>
+<div class="sidebar">
+    <div class="side-item checked">
+        <h5>CS</h5>
+    </div>
+    <div class="side-item">
+        <h5>Amusement</h5>
+    </div>
+    <div class="side-item">
+        <h5>Thingking</h5>
+    </div>
+</div>
 
-<p>最新文章</p>
+<div class="wrapper">
+    <div class="image CS"></div>
+    <div class="image amusement"></div>
+    <div class="image thinking"></div>
+    <div class="radmenu"><a href="#" class="show" >START</a>
+</div>
+<script>
+    var sideItem = document.getElementsByClassName('side-item');
+    var image = document.getElementsByClassName('image');
+    // var radmenu = document.getElementsByClassName('radmenu')[0];
+    var show = document.getElementsByClassName('show')[0];
+    var current = 0;
+    show.href = '/SvSylvie.github.io/CS.html';
+    for(var i = 0; i < sideItem.length; i++) {
+        (function(i){
+            sideItem[i].onclick = function() {
+                current = i;
+                switch(current){
+                    case 0: show.href = '/SvSylvie.github.io/CS.html'; break;
+                    case 1: show.href = '/SvSylvie.github.io/Amusement.html'; break;
+                    case 2: show.href = '/SvSylvie.github.io/Thinking.html'; break;
+                }
+                console.log(current)
+                sideItem[i].classList.add('checked');
+                image[i].style.display = 'block';
+                for(var j = 0; j < sideItem.length; j++) {
+                    if(j != i) {
+                        sideItem[j].classList.remove('checked');
+                        image[j].style.display = 'none';
+                    }
+                }
+            }
+        })(i);
+    }
+</script>
 
-<ul>
-
-　　{% for post in site.posts %}
-
-　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-
-　　{% endfor %}
-
-</ul>

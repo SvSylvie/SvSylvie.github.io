@@ -1,9 +1,7 @@
 baseurl: /SvSylvie.github.io
 markdown: redcarpet
-redcarpet:
-    extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
 safe: false 
-# pygments: true 
-highlighter: pygments
+# # pygments: true 
+# highlighter: pygments
 excerpt_separator: "\n\n\n" 
 paginate: 5

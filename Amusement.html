@@ -1,0 +1,80 @@
+---
+layout: bread
+category: Amusement
+header: Life is full of fun
+title: Amusement
+---
+
+<ul>
+    <h5>English</h5>
+    {% for post in site.tags.English %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>读书</h5>
+    {% for post in site.tags.Reading %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>Music</h5>
+    {% for post in site.tags.Music %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+    
+    <h5>Movie</h5>
+    {% for post in site.tags.Movie %}
+　　<li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+　　{% endfor %}
+
+    <h5>运动</h5>
+    {% for post in site.tags.Sports %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>旅行</h5>
+    {% for post in site.tags.Travel %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>书法</h5>
+    {% for post in site.tags.HandWriting %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>美食</h5>
+    {% for post in site.tags.Food %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
+    <h5>手绘</h5>
+    {% for post in site.tags.Painting %}
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+</ul>

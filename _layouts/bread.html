@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="/SvSylvie.github.io/css/slime.css">
 		<link rel="stylesheet" href="/SvSylvie.github.io/css/index.css">
 		<link rel="stylesheet" href="/SvSylvie.github.io/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/SvSylvie.github.io/css/rouge.css">
 		<title>{{ page.title }}</title>
 		<style>
 			* {
@@ -33,6 +34,8 @@
 				margin: 0 20px;
 				background: #fff;
 				box-shadow: 0 0 24px rgba(0,0,0,.8);
+				width: 97%;
+				height: 100%;
 			}
 			header {
 				background-color: #efdcce;
@@ -47,6 +50,9 @@
 			}
 			.blog-article .date {
 				font-family: 'Source sans pro',cursive,Helvetica,Arial,sans-serif ;
+			}
+			.blog-article img {
+				width: 800px;
 			}
 		</style>
 　　</head>
@@ -111,13 +117,38 @@
             
 			<div class="content">
                 {% if page.isArticle %}
-                    <span class="date">{{ page.date | date_to_string }}</span>
+                <span class="date">{{ page.date | date_to_string }}</span>
                 {% endif %}
-                <div class="blog-article">{{ content }}</div>
+                <div class="blog-article">
+					{{ content }}
+				</div>
             </div>
 		</div>
 		<script src="/SvSylvie.github.io/js/slime.js"></script>
 		<script src="/SvSylvie.github.io/js/jqueryNew.js"></script>
-        <script src="/SvSylvie.github.io/js/bootstrap.min.js"></script>
+		<script src="/SvSylvie.github.io/js/bootstrap.min.js"></script>
+		<script>
+		$(document).scroll(function(e) {
+			var breadcrumb = $(".breadcrumb");
+			var leftmenu = $(".date+.blog-article>ul:first-of-type");
+			if($(document).scrollTop()>120) {
+				breadcrumb.css('top',0);
+				// breadcrumb.css('width','97%');
+				breadcrumb.css('position',"fixed");
+				
+			}else {
+				breadcrumb.css('position',"");
+			}
+			if($(document).scrollTop()>190) {
+				leftmenu.css('top',40);
+				// $(".breadcrumb").css('width','100%');
+				leftmenu.css('position',"fixed");
+				
+			}else {
+				leftmenu.css('top',190);
+				leftmenu.css('position',"absolute");
+			}
+		});
+		</script>
 　　</body>
 </html>

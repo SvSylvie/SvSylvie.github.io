@@ -14,6 +14,14 @@ title: Computer Science and Technology
     </li>
     {% endfor %}
 
+    <h5>博客相关</h5>
+    {% for post in site.tags.Blog %}
+    <li>
+        &emsp;<a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a>
+        &emsp;<span>{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+
     <h5>JS基础</h5>
     {% for post in site.tags.JS %}
     <li>
@@ -62,3 +70,4 @@ title: Computer Science and Technology
     </li>
     {% endfor %}
 </ul>
+<footer>copyright</footer>

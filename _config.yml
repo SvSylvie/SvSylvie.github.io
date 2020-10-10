@@ -1,4 +1,4 @@
-baseurl: /SvSylvie.github.io
+baseurl: /
 markdown: kramdown
 safe: false
 highlighter: rouge
